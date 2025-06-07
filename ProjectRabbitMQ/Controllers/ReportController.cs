@@ -28,10 +28,11 @@ namespace ProjectRabbitMQ.Controllers
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromQuery] string name, IPublishBus bus, CancellationToken ct = default)
         {
+            var x = "teste";
             _ = Task.Run(async () =>
             {
                 int soma = 1;
-                while (true)
+                while (soma <= 100)
                 {
                     var solicitacao = new SolicitacaoRelatorio
                     {

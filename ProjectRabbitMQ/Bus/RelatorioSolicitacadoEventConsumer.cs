@@ -17,7 +17,7 @@ namespace ProjectRabbitMQ.Bus
         {
 
             _logger.LogInformation($"Processando Relatório : {context.Message.Id} - {context.Message.Name}");
-
+            throw new Exception("Erro simulado no processamento");
 
             var relatorio = Lista.Relatorios.FirstOrDefault(x => x.Id == context.Message.Id);
 
